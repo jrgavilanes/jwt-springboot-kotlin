@@ -1,0 +1,13 @@
+version: '3'
+services:
+  postgis:
+    image: postgis/postgis:13-3.1
+    # restart: always
+    environment:
+      POSTGRES_USER: janrax
+      POSTGRES_PASSWORD: janrax
+      POSTGRES_DB: sig_local
+#    volumes:
+#      - ./initdb:/docker-entrypoint-initdb.d
+    ports:
+      - 5432:5432
